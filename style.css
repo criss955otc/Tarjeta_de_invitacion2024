@@ -1,0 +1,17 @@
+.playwrite-ng-modern {
+    font-family: "Playwrite NG Modern";
+    font-optical-sizing: auto;
+    font-weight: 1REM ;
+    font-style: normal;
+  }
+
+body {
+    display: grid;
+    align-content: center;
+    justify-self: center;
+    background-image: url("img/white-textured-concrete.jpg");
+}
+
+.titulo{
+    text-align: center;
+}
