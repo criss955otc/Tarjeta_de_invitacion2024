@@ -1,6 +1,7 @@
 body {
   font-family: "Montserrat", sans-serif;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0px;
@@ -32,13 +33,23 @@ h4 {
   font-weight: 350;
 }
 
-img {
-  width: 1500px;
-}
 section {
   display: flex;
   justify-content: center;
   width: 1545px;
+}
+
+.btn1{
+  background-color: #0A3B63;
+  color: aliceblue;
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  padding: 8px;
+}
+.btn1:hover {
+  background-color: rgb(4, 4, 163);
 }
 .sec1 {
   height: 600px;
@@ -53,25 +64,177 @@ section {
   height: 400px;
 }
 .sec2 div {
-    margin: 0px 50px;
-  }
+  margin: 0px 50px;
+}
 
 .sec3 {
-  background-color: rgb(37, 52, 38);
+  background-color: rgb(77, 94, 78);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 400px;
 }
 
-.sec3 h3{
-    size: 2rem;
-    color: aliceblue;
+.sec3 h3 {
+  size: 3rem;
+  color: aliceblue;
+}
+.sec3 h4 {
+  size: 2rem;
+  color: aliceblue;
 }
 
-.frase{
-    text-align: center;
-    width: 300px;
+.frase {
+  text-align: center;
+  width: 300px;
+}
+.frase2 {
+  text-align: center;
+  width: 500px;
+}
+.sec4 {
+  background-image: url(img/white-textured-concrete.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 1500px;
+}
+
+.sec5 {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(233, 233, 220);
+  margin-top: 45px;
+  height: 300px;
+  width: 900px;
+  position: relative; /* Asegura que el pseudo-elemento se posicione relativamente a este contenedor */
+}
+
+.sec5::before {
+  content: '';
+  position: absolute; /* Posiciona el pseudo-elemento absolutamente dentro del contenedor */
+  top: 10px; /* Ajusta el desplazamiento del borde */
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  border: 3px solid rgb(2, 2, 19); /* Define el grosor y color del borde */
+  box-sizing: border-box; /* Asegura que el tamaño incluye el borde */
+}
+
+.sec6 {
+  background-color: rgb(77, 94, 78);
+  justify-items: center;
+  display: grid;
+  height: 550px;
+}
+.sec6 h3 {
+  margin: 55px 0px 0px 0px;
+  font-size: xx-large;
+  color: aliceblue;
+}
+
+.sec6 h2 {
+  margin: 15px 0px 0px 0px;
+  font-size: medium;
+  color: aliceblue;
+}
+.vestido{
+  display: flex;
+}
+.info_vest1{
+  margin: 35px;
+  width: 275px;
+  height: 375px;
+  border: 5px;
+  background-image: url(img/model.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.info_vest2{
+  text-align: center;
+  margin: 35px;
+  width: 275px;
+  height: 375px;
+  border: 10px;
+  border-color: #0A3B63;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 255px;
+}
+
+.container h2{
+  color: black;
+  font-weight: 400;
+  font-size: medium;
+}
+.container h3{
+  color: black;
+  font-size: x-large;
+}
+.iglesia {
+  background-image: url(img/igle.png);
+  background-position: center;
+  background-size: cover;
+  margin: 35px;
+  width: 157px;
+  height: 159px;
+}
+.recep {
+  background-image: url(img/recep.png);
+  background-position: center;
+  background-size: cover;
+  margin: 35px;
+  width: 157px;
+  height: 159px;
+}
+
+.ceremonia {
+  display: grid;
+  width: 350px;
+  height: auto;
+  margin-left: 65px;
+}
+
+.carrucel {
+  display: flex;
+  justify-content: center;
+  width: 900px;
+  height: 375px;
+}
+
+.carrucel div {
+  width: 275px;
+  height: 375px;
+  margin: 0px 25px;
+  box-shadow: 3px 10px 15px rgb(145, 144, 144);
+}
+.imagen1 {
+  background-image: url(img/IMG_2068.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.imagen2 {
+  background-image: url(img/IMG_2067.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.imagen3 {
+  background-image: url(img/IMG_2065.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.sec4 img {
+  margin-top: 50px;
+  width: 500px;
 }
 
 .Encabezado {
@@ -79,8 +242,6 @@ section {
   margin-top: 35px;
   font-size: 2rem;
 }
-
-
 
 .cancion {
   display: flex;
