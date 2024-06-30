@@ -26,3 +26,27 @@ simplyCountdown('#cuenta', {
     zeroPad: false,
     countUp: false
 });
+
+let currentIndex = 0;
+
+function moveSlide(direction) {
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+    const itemsPerView = 3;
+
+    currentIndex = (currentIndex + direction + totalItems) % totalItems;
+
+    // Asegurar que el índice no mueva menos de tres elementos
+    if (currentIndex < 0) {
+        currentIndex = totalItems - itemsPerView;
+    } else if (currentIndex > totalItems - itemsPerView) {
+        currentIndex = 0;
+    }
+
+    const offset = -currentIndex * (100 / itemsPerView);
+    document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.carousel').style.transform = 'translateX(0%)';
+});

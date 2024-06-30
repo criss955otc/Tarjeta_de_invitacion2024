@@ -64,13 +64,23 @@
     
       </div>
     </section>
+    <div class="carousel-container">
+      <div class="carousel">
+          <div id="imagen1" class="carousel-item"></div>
+          <div id="imagen2" class="carousel-item"></div>
+          <div id="imagen3" class="carousel-item"></div>
+          <div id="imagen4" class="carousel-item"></div>
+          <div id="imagen5" class="carousel-item"></div>
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+       <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+  
 
     <section class="sec4">
-      <div class="carrucel">
-        <div class="imagen1"></div>      
-        <div class="imagen2"></div>     
-        <div class="imagen3"></div>   
-      </div>
+
+       
+
       <img src="img/1Recurso 2.png" alt="">
 
       <div class="container">
@@ -95,6 +105,25 @@
           <button class="btn1" onclick="location.href='https:acortar.link/8j2LNi'">Ver dirección</button>
         </div>
       </div>
+
+      <section class="sec6">
+        <h3>
+          CÓDIGO DE VESTIMENTA
+      </h3>
+        <div>
+          <div class="vestido">
+            <div class="info_vest1"></div>
+            <div class="info_vest2">
+              <h3>FORMAL</h3>
+              <h2>Mujeres | Vestido Largo
+              <h2>Hombres | Traje </h2>
+              <h2>______________________</h2>
+              <h2>Nos reservamos el blanco, </h2>
+              <h2>beige y sus derivados para la NOVIA.</h2>
+            </div>
+          </div> 
+        </div>
+      </section>
        
       <section class="sec5">
         <div class="frase2">
@@ -108,26 +137,42 @@
         </div>
       </section>
   </section>
-  <section class="sec6">
-    <h3>
-      CÓDIGO DE VESTIMENTA
-  </h3>
-    <div class="">
-      <div class="vestido">
-        <div class="info_vest1"></div>
-        <div class="info_vest2">
-          <h3>FORMAL</h3>
-          <h2>Mujeres | Vestido Largo
-          <h2>Hombres | Traje </h2>
-          <h2>______________________</h2>
-          <h2>Nos reservamos el blanco, </h2>
-          <h2>beige y sus derivados para la NOVIA.</h2>
-        </div>
-      </div> 
-    </div>
-  </section>
   
 
+  <section class="sec7">
+    <div class="foto"></div>
+    <div class="anuncio">
+      <div class="info_3">
+        <h3>SOLO ADULTOS</h3>
+        <h2>
+          Amamos a sus pequeños, sin embargo, queremos que en este día solo tengan que preocuparse por pasarla increíble y disfrutar el inicio de nuestra historia.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="formu">
+      <h2>CONFIRMA TU ASISTENCIA</h2>
+      <form class="form" action="form">
+        
+        <h3>Invitado</h3>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" placeholder="Nombres">    
+          <input type="text" class="form-control" placeholder="Apellidos">    
+        </div>
+
+        <h3>Acompañante</h3>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="floatingPassword" placeholder="Nombres">
+          <input type="text" class="form-control" id="floatingPassword" placeholder="Apellidos">
+        </div>
+        <button type="submit" class="btn2">Confirmar</button>
+      </form>
+    </div>
+  </section>
+
+  
     <script src="simplyCountdown.min.js"></script>
     <script src="script.js"></script>
   </body>
