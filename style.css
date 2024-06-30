@@ -7,6 +7,7 @@ body {
   margin: 0px;
   padding: 0px;
   background-image: url(img/7882609.jpg);
+  background-position: center;
 }
 
 h1 {
@@ -163,13 +164,23 @@ section {
   height: 400px;
 }
 
+.regalo{
+  justify-content: center;
+  width: 160px;
+  height: 80px;
+  background-image: url(img/Regalo.png);
+  background-size: cover;
+  background-position: center;
+
+}
+
 .anuncio{
   text-justify: center;
   text-align: center;
 }
 
 .sec7 h3 {
-  margin: 55px 0px 0px 0px;
+  margin: 0px;
   font-size: xx-large;
   color: rgb(28, 28, 29);
 }
@@ -195,6 +206,9 @@ section {
 }
 
 .info_3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 300px;
 }
 
@@ -208,7 +222,7 @@ section {
   width: 275px;
   height: 375px;
   border: 5px;
-  background-image: url(img/model.jpg);
+  background-image: url(img/vestido.png);
   background-size: cover;
   background-position: center;
 }
@@ -220,6 +234,15 @@ section {
   border: 10px;
   border-color: #0A3B63;
 }
+.info_vest3{
+  margin: 35px;
+  width: 275px;
+  height: 375px;
+  border: 5px;
+  background-image: url(img/traje\ hombre.png);
+  background-size: cover;
+  background-position: center;
+}
 
 .container {
   display: flex;
@@ -230,6 +253,7 @@ section {
 }
 
 .container h2{
+  justify-content: left;
   color: black;
   font-weight: 400;
   font-size: medium;
