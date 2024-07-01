@@ -40,7 +40,7 @@ section {
   justify-content: center;
   width: 1545px;
 }
-footer{
+footer {
   font-size: small;
   display: flex;
   align-items: center;
@@ -48,6 +48,13 @@ footer{
   border-top: 2px solid #ffe8cf;
   width: 1545px;
   background-color: #b0714e;
+}
+select{
+  padding: 7px;
+  border: none;
+}
+select:hover{
+  color: #b0714e;
 }
 
 .btn1 {
@@ -101,11 +108,11 @@ footer{
   margin: 0px 50px;
 }
 
-.btn4{
+.btn4 {
   background-color: #b0714e;
   margin: 0px 15px;
   color: #ffe8cf;
-  border: 2px solid #ffe8cf ;
+  border: 2px solid #ffe8cf;
   width: 120px;
   padding: 8px;
   margin: 15px 25px;
@@ -135,8 +142,8 @@ footer{
 .frase {
   text-align: center;
   width: 300px;
-  padding: 15px ;
-  border: 3px solid #ffe8cf ;
+  padding: 15px;
+  border: 3px solid #ffe8cf;
 }
 .frase2 {
   text-align: center;
@@ -146,7 +153,7 @@ footer{
   font-family: "Dancing Script", cursive;
   font-size: 3rem;
 }
-.frase8 h4{
+.frase8 h4 {
   font-size: 2rem;
 }
 
@@ -235,7 +242,6 @@ footer{
   background-size: cover;
   background-position: center;
 }
-
 
 .anuncio {
   text-justify: center;
@@ -401,11 +407,11 @@ footer{
   text-align: center;
   margin-top: 35px;
 }
- .Padres h3{
+.Padres h3 {
   margin: 0px;
   font-size: 2rem;
   font-family: "Dancing Script", cursive;
- }
+}
 .cancion {
   display: flex;
   justify-content: center;
@@ -465,9 +471,22 @@ footer{
   align-items: center;
   justify-content: center;
   margin: 50px 0px;
-  height: 400px;
+  height: auto;
   width: 650px;
   background-color: #ffe8cf;
+}
+
+.invitado{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.invitado input{
+  width: 100%;
+}
+.invitado label{
+  font-size: small;
 }
 
 .form {
@@ -508,7 +527,8 @@ input {
   display: flex;
   transition: transform 0.5s ease;
   width: calc(
-    100% * 7 / 3); /* Ajustar el ancho total según la cantidad de elementos */
+    100% * 7 / 3
+  ); /* Ajustar el ancho total según la cantidad de elementos */
 }
 
 .carousel-item {
@@ -519,7 +539,6 @@ input {
 }
 
 .prev,
-
 .next {
   position: absolute;
   top: 50%;
@@ -542,12 +561,10 @@ input {
   right: 10px;
 }
 
-@media only screen and (max-width: 600px) /*-------------------------------------------------------------------------------------*/
-{
-
-  html{
-    width: auto;
-    box-sizing: border-box;  
+@media only screen and (max-width: 600px) /*-------------------------------------------------------------------------------------*/ {
+  html {
+    width: 100%;
+    box-sizing: border-box;
   }
   body {
     font-family: "Montserrat", sans-serif;
@@ -556,595 +573,599 @@ input {
     background-image: url(img/7882609.jpg);
     background-position: center;
     background-size: 100%;
-    overflow-x: hidden;    
+    overflow-x: hidden;
+    width: 100%;
   }
-  
+
   h1 {
-      font-family: "Rouge Script", cursive;
-      justify-items: center;
-      align-items: end;
-      color: #fff;
-      font-size: 4rem;
-      margin-top: 45px;
-      margin-bottom: 25px;
-      padding: 0px;
-      display: grid;
+    font-family: "Rouge Script", cursive;
+    justify-items: center;
+    align-items: end;
+    color: #fff;
+    font-size: 4rem;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    padding: 0px;
+    display: grid;
   }
-  
+
   h2 {
-      display: grid;
-      justify-items: center;
-      margin-top: 25px;
-      margin-bottom: 25px;
-      color: #fff;
-      font-weight: 200;
-      font-size: medium;
+    display: grid;
+    justify-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #fff;
+    font-weight: 200;
+    font-size: medium;
   }
-  
+
   h4 {
-      font-weight: 350;
+    font-weight: 350;
   }
-  
+
   section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      max-width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
-  
+
   footer {
-      font-size: small;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border-top: 2px solid #ffe8cf;
-      width: 100%;
-      max-width: 450px;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #ffe8cf;
+    width: 100%;
   }
-  
+
   footer h2 {
-      margin: 10px;
+    margin: 10px;
   }
-  
-  .btn1, .btn2, .btn3, .btn4 {
-      background-color: #b0714e;
-      color: aliceblue;
-      border: 0px;
-      display: flex;
-      justify-content: center;
-      width: 120px;
-      padding: 8px;
+  .sociales {
+    display: flex;
   }
-  
-  .btn2 {
-      margin-top: 15px;
-  }
-  
-  .btn3 {
-      background-color: #ffe8cf;
-      color: #0a3b63;
-      border: none;
-      margin: 15px 25px;
-  }
-  
-  .btn2:hover, .btn1:hover {
-      background-color: rgb(4, 4, 163);
-  }
-  
+  .btn1,
+  .btn2,
+  .btn3,
   .btn4 {
-      background-color: #b0714e;
-      margin: 0px 0px 45px 0px;
-      color: #ffe8cf;
-      border: 2px solid #ffe8cf;
-      width: 120px;
-      padding: 8px;
+    background-color: #b0714e;
+    color: aliceblue;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    padding: 8px;
   }
-  
+
+  .btn2 {
+    margin-top: 15px;
+  }
+
+  .btn3 {
+    background-color: #ffe8cf;
+    color: #0a3b63;
+    border: none;
+    margin: 15px 25px;
+  }
+
+  .btn2:hover,
+  .btn1:hover {
+    background-color: rgb(4, 4, 163);
+  }
+
+  .btn4 {
+    background-color: #b0714e;
+    margin: 0px 0px 45px 0px;
+    color: #ffe8cf;
+    border: 2px solid #ffe8cf;
+    width: 120px;
+    padding: 8px;
+  }
+
   .btn4:hover {
-      background-color: rgb(255, 253, 195);
+    background-color: rgb(255, 253, 195);
   }
-  
+
   .sec1 {
-      height: 650px;
-      background-image: url(img/IMG_2064.webp);
-      background-position: center;
-      background-size: cover;
+    height: 650px;
+    background-image: url(img/IMG_2064.webp);
+    background-position: center;
+    background-size: cover;
   }
-  
+
   .sec2 {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      height: 450px;
-      width: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 450px;
+    width: auto;
   }
-  
+
   .sec2 div {
-      margin: 0px 50px;
+    margin: 0px 50px;
   }
-  
+
   .sec3 {
-      background-color: #b0714e;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 400px;
+    background-color: #b0714e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
   }
-  
+
   .sec3 h3 {
-      size: 3rem;
-      color: aliceblue;
+    size: 3rem;
+    color: aliceblue;
   }
-  
+
   .sec3 h4 {
-      size: 2rem;
-      color: aliceblue;
+    size: 2rem;
+    color: aliceblue;
   }
-  
+
   .frase {
-      text-align: center;
-      width: 300px;
-      padding: 15px;
-      border: 3px solid #ffe8cf;
+    text-align: center;
+    width: 300px;
+    padding: 15px;
+    border: 3px solid #ffe8cf;
   }
-  
+
   .frase2 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      max-width: 500px;
-      height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
   }
-  
+
   .frase2 h3 {
-      font-family: "Dancing Script", cursive;
-      font-size: 3rem;
-      margin-bottom: 0px;
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    margin-bottom: 0px;
   }
-  
+
   .sec5 h4 {
-      width: 250px;
-      font-size: small;
-      margin: 45px;
+    width: 250px;
+    font-size: small;
+    margin: 45px;
   }
-  
+
   .sec4 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
   }
-  
+
   .sec5 {
-      display: flex;
-      text-align: center;
-      justify-content: center;
-      align-content: center;
-      background-color: #ffe8cf;
-      margin: 35px;
-      height: auto;
-      width: 100%;
-      max-width: 350px;
-      position: relative; /* Asegura que el pseudo-elemento se posicione relativamente a este contenedor */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    background-color: #ffe8cf;
+    margin: 35px;
+    height: auto;
+    width: 100%;
+    max-width: 350px;
+    position: relative; /* Asegura que el pseudo-elemento se posicione relativamente a este contenedor */
   }
-  
+
   .sec5::before {
-      content: "";
-      position: absolute; /* Posiciona el pseudo-elemento absolutamente dentro del contenedor */
-      top: 10px; /* Ajusta el desplazamiento del borde */
-      bottom: 10px;
-      left: 10px;
-      right: 10px;
-      border: 3px solid #b0714e; /* Define el grosor y color del borde */
-      box-sizing: border-box; /* Asegura que el tamaño incluye el borde */
+    content: "";
+    position: absolute; /* Posiciona el pseudo-elemento absolutamente dentro del contenedor */
+    top: 10px; /* Ajusta el desplazamiento del borde */
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    border: 3px solid #b0714e; /* Define el grosor y color del borde */
+    box-sizing: border-box; /* Asegura que el tamaño incluye el borde */
   }
-  
+
   .sec6 {
-      margin-top: 65px;
-      background-color: #b0714e;
-      justify-items: center;
-      height: auto;
+    margin-top: 65px;
+    background-color: #b0714e;
+    justify-items: center;
+    height: auto;
   }
-  
+
   .vestido {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .sec6 h3 {
-      font-size: 2rem;
-      font-family: "Dancing Script", cursive;
-      margin-top: 35px;
-      color: aliceblue;
+    font-size: 2rem;
+    font-family: "Dancing Script", cursive;
+    margin-top: 35px;
+    color: aliceblue;
   }
-  
+
   .sec6 h2 {
-      margin: 15px 0px 0px 0px;
-      font-size: medium;
-      color: aliceblue;
+    margin: 15px 0px 0px 0px;
+    font-size: medium;
+    color: aliceblue;
   }
-  
+
   .sec7 {
-      background-color: #b0714e;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: auto;
-      width: 100%;
-      max-width: 450px;
+    background-color: #b0714e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    max-width: 450px;
   }
-  
+
   .sec8 {
-      text-align: center;
-      height: auto;
-      width: 100%;
-      max-width: 450px;
+    height: auto;
+    width: 100%;
   }
-  
+
   .frase8 {
-       width: 100%;
-      margin: 20px;
-      display: grid;
-      justify-content: center;
-      height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px;
+    height: auto;
   }
-  
+
   .frase8 h4 {
-      margin: 7px;
-      font-size: large;
+    margin: 7px;
+    font-size: large;
   }
-  
+
   .sec8 h3 {
-      margin: 15px;
-      width: 100%;
-      max-width: 350px;
-      color: aliceblue;
+    font-size: small;
+    margin: 15px;
+    width: 75%;
+    color: aliceblue;
   }
-  
+
   .regalo {
-      justify-content: center;
-      width: 160px;
-      height: 80px;
-      background-image: url(img/Regalo.png);
-      background-size: cover;
-      background-position: center;
+    justify-content: center;
+    width: 160px;
+    height: 80px;
+    background-image: url(img/Regalo.png);
+    background-size: cover;
+    background-position: center;
   }
-  
+
   .anuncio {
-      text-justify: center;
-      text-align: center;
+    text-justify: center;
+    text-align: center;
   }
-  
+
   .sec7 h3 {
-      font-family: "Dancing Script", cursive;
-      font-size: 2rem;
-      margin: 0px;
-      color: #ffe8cf;
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+    margin: 0px;
+    color: #ffe8cf;
   }
-  
+
   .sec7 h2 {
-      margin: 15px 0px 0px 0px;
-      font-size: medium;
-      color: #ffe8cf;
+    margin: 15px 0px 0px 0px;
+    font-size: medium;
+    color: #ffe8cf;
   }
-  
+
   .foto {
-      height: 400px;
-      width: 100%;
-      max-width: 450px;
-      background-image: url(img/IMG_2063.webp);
-      background-position: center;
-      background-size: cover;
+    height: 400px;
+    width: 100%;
+    background-image: url(img/IMG_2063.webp);
+    background-position: center;
+    background-size: cover;
   }
-  
+
   .anuncio {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 400px;
-      width: 100%;
-      max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    max-width: 50%;
   }
-  
+
   .info_3 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
   }
-  
+
   .info_vest1 {
-      margin: 5px;
-      width: 175px;
-      height: 175px;
-      border: 5px;
-      background-image: url(img/vestido.png);
-      background-size: cover;
-      background-position: center;
+    margin: 5px;
+    width: 175px;
+    height: 175px;
+    border: 5px;
+    background-image: url(img/vestido.png);
+    background-size: cover;
+    background-position: center;
   }
-  
+
   .info_vest2 {
-      text-align: center;
-      margin: 0px 35px;
-      width: 100%;
-      max-width: 275px;
-      height: auto;
-      border: 10px;
-      border-color: #0a3b63;
+    text-align: center;
+    margin: 0px 35px;
+    width: 100%;
+    max-width: 275px;
+    height: auto;
+    border: 10px;
+    border-color: #0a3b63;
   }
-  
+
   .info_vest3 {
-      margin: 5px;
-      width: 195px;
-      height: 195px;
-      border: 5px;
-      background-image: url(img/traje\ hombre.png);
-      background-size: cover;
-      background-position: center;
+    margin: 5px;
+    width: 195px;
+    height: 195px;
+    border: 5px;
+    background-image: url(img/traje\ hombre.png);
+    background-size: cover;
+    background-position: center;
   }
-  
+
   .container {
-      width: 100%;
-      max-width: 450px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: auto;
-      margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-top: 25px;
   }
-  
+
   .container h2 {
-      justify-content: left;
-      color: black;
-      font-weight: 400;
-      font-size: medium;
+    justify-content: left;
+    color: black;
+    font-weight: 400;
+    font-size: medium;
   }
-  
+
   .container h3 {
-      color: black;
-      font-size: x-large;
+    color: black;
+    font-size: x-large;
   }
-  
+
   .iglesia {
-      background-image: url(img/igle.png);
-      background-position: center;
-      background-size: cover;
-      width: 80px;
-      height: 80px;
-      margin: 5px;
+    background-image: url(img/igle.png);
+    background-position: center;
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
   }
-  
+
   .recep {
-      background-image: url(img/recep.png);
-      background-position: center;
-      background-size: cover;
-      width: 80px;
-      height: 80px;
-      margin: 5px;
+    background-image: url(img/recep.png);
+    background-position: center;
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
   }
-  
+
   .ceremonia {
-      margin: 0px;
-      display: grid;
-      justify-content: center;
-      justify-items: center;
-      width: auto;
+    margin: 0px;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    width: auto;
   }
-  
+
   .ceremonia h3 {
-      margin: 5px;
-      font-size: 2rem;
-      font-family: "Dancing Script", cursive;
+    margin: 5px;
+    font-size: 2rem;
+    font-family: "Dancing Script", cursive;
   }
-  
+
   #imagen1 {
-      background-image: url(img/IMG_2060.webp);
-      background-position: center;
-      background-size: cover;
+    background-image: url(img/IMG_2060.webp);
+    background-position: center;
+    background-size: cover;
   }
-  
+
   #imagen2 {
-      background-image: url(img/IMG_2067.webp);
-      background-position: center;
-      background-size: cover;
+    background-image: url(img/IMG_2067.webp);
+    background-position: center;
+    background-size: cover;
   }
-  
+
   #imagen3 {
-      background-image: url(img/IMG_2065.webp);
-      background-position: center;
-      background-size: cover;
+    background-image: url(img/IMG_2065.webp);
+    background-position: center;
+    background-size: cover;
   }
-  
+
   #imagen4 {
-      background-image: url(img/img2.webp);
-      background-position: center;
-      background-size: cover;
+    background-image: url(img/img2.webp);
+    background-position: center;
+    background-size: cover;
   }
-  
+
   #imagen5 {
-      background-image: url(img/IMG_2068.webp);
-      background-position: center;
-      background-size: cover;
+    background-image: url(img/IMG_2068.webp);
+    background-position: center;
+    background-size: cover;
   }
-  
+
   #imagen6 {
-      background-image: url(img/IMG_2069.webp);
-      background-position: center;
-      background-size: cover;
+    background-image: url(img/IMG_2069.webp);
+    background-position: center;
+    background-size: cover;
   }
-  
+
   #imagen7 {
-      background-image: url(img/img7.webp);
-      background-position: center;
-      background-size: cover;
+    background-image: url(img/img7.webp);
+    background-position: center;
+    background-size: cover;
   }
-  
+
   .sec4 img {
-      margin-top: 50px;
-      width: 100%;
-      max-width: 450px;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 450px;
   }
-  
+
   .Encabezado {
-      font-size: 2rem;
-      font-family: "Dancing Script", cursive;
-      text-align: center;
-      margin-top: 35px;
+    font-size: 2rem;
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    margin-top: 35px;
   }
-  
+
   .Padres h3 {
-      margin: 0px;
-      font-size: 2rem;
-      font-family: "Dancing Script", cursive;
+    margin: 0px;
+    font-size: 2rem;
+    font-family: "Dancing Script", cursive;
   }
-  
+
   .cancion {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
   }
-  
+
   .titulo {
-      display: flex;
-      flex-direction: column;
-      height: auto;
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
-  
+
   .simply-section {
-      background: rgba(255, 255, 255, 0.1); /* color de fondo translúcido */
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(10px); /* desenfoque del fondo */
-      -webkit-backdrop-filter: blur(10px); /* soporte para Safari */
-      border: 1px solid rgba(255, 255, 255, 0.3); /* borde blanco translúcido */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff; /* color del texto */
-      text-align: center;
-      padding: 10px;
-      box-sizing: border-box;
-      width: 80px;
-      height: 75px;
-      margin: 0px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    background: rgba(255, 255, 255, 0.1); /* color de fondo translúcido */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* desenfoque del fondo */
+    -webkit-backdrop-filter: blur(10px); /* soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* borde blanco translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* color del texto */
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 80px;
+    height: 75px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  
+
   .simply-amount {
-      color: azure;
-      display: block;
-      font-size: large;
-      font-weight: 850;
+    color: azure;
+    display: block;
+    font-size: large;
+    font-weight: 850;
   }
-  
+
   #cuenta {
-      display: flex;
-      align-content: center;
-      justify-content: center;
-      margin-top: 4px;
-      margin-bottom: 4px;
-      height: 100px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    height: 100px;
   }
-  
+
   .Padres {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
-  
+
   .formu {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 50px 0px;
-      height: 400px;
-      width: 100%;
-      max-width: 340px;
-      background-color: #ffe8cf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px;
+    height: 400px;
+    width: 100%;
+    max-width: 340px;
+    background-color: #ffe8cf;
   }
-  
+
   .form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 350px;
   }
-  
+
   .form-floating {
-      width: 100%;
-      max-width: 300px;
-      display: flex;
-      flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
   }
-  
+
   input {
-      padding: 7px;
-      border: none;
-      margin: 5px;
+    padding: 7px;
+    border: none;
+    margin: 5px;
   }
-  
+
   .formu h2 {
-      color: black;
-      margin-top: 5px;
-      margin-bottom: 0px;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 0px;
   }
-  
+
   .carousel-container {
-      margin-top: 45px;
-      position: relative;
-      height: 215px;
-      width: 90%;
-      max-width: 900px;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 45px;
+    position: relative;
+    height: 215px;
+    width: 90%;
+    max-width: 900px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+
   .carousel {
-      display: flex;
-      transition: transform 0.5s ease;
-      width: calc(100% * 7 / 3); /* Ajustar el ancho total según la cantidad de elementos */
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(
+      100% * 7 / 3
+    ); /* Ajustar el ancho total según la cantidad de elementos */
   }
-  
+
   .carousel-item {
-      width: calc(100% / 1);
-      height: 215px;
-      background-size: cover;
-      background-position: center;
+    width: calc(100% / 1);
+    height: 215px;
+    background-size: cover;
+    background-position: center;
   }
-  
+
   .prev,
   .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-100%);
-      background-color: rgba(0, 0, 0, 0.5);
-      border: none;
-      color: white;
-      font-size: 2rem;
-      cursor: pointer;
-      padding: 0 15px;
-      z-index: 1;
-      border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 15px;
+    z-index: 1;
+    border-radius: 3px;
   }
-  
+
   .prev {
-      left: 10px;
+    left: 10px;
   }
-  
+
   .next {
-      right: 10px;
+    right: 10px;
   }
-  }  
+}

@@ -148,7 +148,7 @@
         <div class="regalo"></div>
         <h3>
           Mesa de Regalos
-          ________________
+          ___________
           <br>
           Lluvia de Sobres
         </h3>
@@ -171,10 +171,17 @@
           <input type="text" class="form-control" placeholder="Apellidos">    
         </div>
 
-        <h3>Acompañante</h3>
+        <h3>Acompañantes</h3>
         <div class="form-floating">
-          <input type="text" class="form-control" id="floatingPassword" placeholder="Nombres">
-          <input type="text" class="form-control" id="floatingPassword" placeholder="Apellidos">
+          <select id="inv" onchange="createInputs()">
+            <option >Seleccione una opción</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <div class="invitado" id="inputContainer"></div>
+
         </div>
         <button type="submit" class="btn2">Confirmar</button>
       </form>

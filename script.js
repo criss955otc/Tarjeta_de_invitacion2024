@@ -50,3 +50,24 @@ function moveSlide(direction) {
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.carousel').style.transform = 'translateX(0%)';
 });
+
+function createInputs() {
+    const select = document.getElementById('inv');
+    const inputContainer = document.getElementById('inputContainer');
+    const numberOfInputs = parseInt(select.value, 10);
+
+    // Clear the container
+    inputContainer.innerHTML = '';
+
+    // Create the inputs
+    for (let i = 0; i < numberOfInputs; i++) {
+        const input = document.createElement('input');
+        const label = document.createElement('label');
+        label.type = 'text';
+        label.innerText = `Nombres y apellidos`;
+        input.type = 'text';
+        input.placeholder = `Invitado ${i + 1}`;
+        inputContainer.appendChild(label);
+        inputContainer.appendChild(input);        
+    }
+}
