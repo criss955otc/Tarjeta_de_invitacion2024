@@ -32,7 +32,7 @@ let currentIndex = 0;
 function moveSlide(direction) {
     const items = document.querySelectorAll('.carousel-item');
     const totalItems = items.length;
-    const itemsPerView = 3;
+    const itemsPerView = 5;
 
     currentIndex = (currentIndex + direction + totalItems) % totalItems;
 
