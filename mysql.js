@@ -25,7 +25,7 @@ connection.connect(err => {
 });
 
 // Ruta para manejar el envío del formulario
-app.post('/submit', (req, res) => {
+app.post('/sub', (req, res) => {
     const { nombres, apellidos, cantidad_acompanantes, ...acompanantes } = req.body;
 
     // Insertar en la tabla tbl_invitado
