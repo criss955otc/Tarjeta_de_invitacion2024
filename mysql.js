@@ -7,6 +7,8 @@ const port = 3000;
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json()); // Asegúrate de manejar JSON también
+
 
 // MySQL connection
 const connection = mysql.createConnection({
@@ -24,12 +26,19 @@ connection.connect(err => {
     console.log('Connected to the database as ID', connection.threadId);
 });
 
+
+
+
+app.get("/ingreso", (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+});
+
 // Ruta para manejar el envío del formulario
 app.post('/sub', (req, res) => {
     const { nombres, apellidos, cantidad_acompanantes, ...acompanantes } = req.body;
 
     // Insertar en la tabla tbl_invitado
-    connection.query('INSERT INTO tbl_invitado (nombres, apellidos) VALUES (nombres, apellidos)',(err, result) => {
+    connection.query('INSERT INTO tbl_invitado (nombres, apellidos) VALUES (?, ?)', [nombres, apellidos], (err, result) => {
         if (err) {
             console.error('Error insertando en tbl_invitado:', err);
             res.status(500).send('Error insertando en tbl_invitado');
@@ -44,13 +53,12 @@ app.post('/sub', (req, res) => {
             values.push([invitadoId, acompanantes[`acompanante${i}`]]);
         }
 
-        connection.query('INSERT INTO tbl_acompa (id_invitado, nombre_acompanante) VALUES (values)', (err, result) => {
+        connection.query('INSERT INTO tbl_acompa (id_invitado, nombre_acompanante) VALUES ?', [values], (err, result) => {
             if (err) {
                 console.error('Error insertando en tbl_acompa:', err);
                 res.status(500).send('Error insertando en tbl_acompa');
                 return;
             }
-
             res.send('Datos insertados correctamente');
         });
     });
@@ -59,3 +67,4 @@ app.post('/sub', (req, res) => {
 app.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}/`);
 });
+

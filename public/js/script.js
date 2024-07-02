@@ -68,7 +68,8 @@ function createInputs() {
         input.type = 'text';
         input.placeholder = `Invitado ${i + 1}`;
         inputContainer.appendChild(label);
-        inputContainer.appendChild(input);        
+        inputContainer.appendChild(input);  
+              
     }
 
 
