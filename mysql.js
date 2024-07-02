@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql2');
+const path = require('path')
 
 const app = express();
 const port = 3000;
@@ -27,10 +28,8 @@ connection.connect(err => {
 });
 
 
-
-
 app.get("/ingreso", (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Ruta para manejar el envío del formulario
