@@ -70,4 +70,6 @@ function createInputs() {
         inputContainer.appendChild(label);
         inputContainer.appendChild(input);        
     }
+
+
 }

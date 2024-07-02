@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Invitacion</title>
+    <title>Boda Pame y Edy</title>
     <link rel="stylesheet" href="style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -163,28 +163,26 @@
   <section>
     <div class="formu">
       <h2>CONFIRMA TU ASISTENCIA</h2>
-      <form class="form" action="form">
-        
+      <form class="form" action="/submit" method="POST">
         <h3>Invitado</h3>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" placeholder="Nombres">    
-          <input type="text" class="form-control" placeholder="Apellidos">    
+            <input type="text" class="form-control" placeholder="Nombres" name="nombres">
+            <input type="text" class="form-control" placeholder="Apellidos" name="apellidos">
         </div>
 
         <h3>Acompañantes</h3>
         <div class="form-floating">
-          <select id="inv" onchange="createInputs()">
-            <option >Seleccione una opción</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-          <div class="invitado" id="inputContainer"></div>
-
+            <select id="inv" onchange="createInputs()" name="cantidad_acompanantes">
+                <option>Seleccione una opción</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <div class="invitado" id="inputContainer"></div>
         </div>
         <button type="submit" class="btn2">Confirmar</button>
-      </form>
+    </form>
     </div>
   </section>
 
@@ -204,12 +202,16 @@
     </div>
 
   </section>
-    <script src="simplyCountdown.min.js"></script>
-    <script src="script.js"></script>
+      
     <footer>
 
         <h2>Designed by:</h2>
         <button class="btn4" onclick="location.href='https:www.instagram.com/criss95/'">@criss95</button>
     </footer>
+
+    <script src="mysql.js"></script>
+    <script src="simplyCountdown.min.js"></script>
+    <script src="script.js"></script>
+    
   </body>
 </html>
