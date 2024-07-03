@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boda Pame y Edy</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="/public/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +17,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
-
   </head>
 
   <body>
@@ -62,7 +61,6 @@
         <h4>
           Como un gol en el minuto 90.
         </h4>
-    
       </div>
     </section>
     <div class="carousel-container">
@@ -76,12 +74,10 @@
           <div id="imagen7" class="carousel-item"></div>
       </div>
       <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-       <button class="next" onclick="moveSlide(1)">&#10095;</button>
-  </div>
-  
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
 
     <section class="sec4">
-
       <div class="container">
         <div class="iglesia"></div>
         <div class="ceremonia">
@@ -92,7 +88,7 @@
           <br>
           Av. Sucre y Liborio Madera
           </h2>
-          <button class="btn1" onclick="location.href='https:acortar.link/ZOGsoz'"">Ver dirección</button>
+          <button class="btn1" onclick="location.href='https://acortar.link/ZOGsoz'">Ver dirección</button>
         </div>    
       </div>
 
@@ -104,7 +100,7 @@
           <br>
           Finca Bellavista          
           </h2>
-          <button class="btn1" onclick="location.href='https:acortar.link/8j2LNi'">Ver dirección</button>
+          <button class="btn1" onclick="location.href='https://acortar.link/8j2LNi'">Ver dirección</button>
         </div>
       </div>
 
@@ -127,7 +123,7 @@
           </div> 
         </div>
       </section>
-       
+    
       <section class="sec5">
         <div class="frase2">
           <h3>
@@ -138,80 +134,76 @@
           </h4>
         </div>
       </section>
-  </section>
-  
+    </section>
 
-  <section class="sec7">
-    <div class="foto"></div>
-    <div class="anuncio">
-      <div class="info_3">
-        <div class="regalo"></div>
-        <h3>
-          Mesa de Regalos
-          ___________
-          <br>
-          Lluvia de Sobres
-        </h3>
-        <h2>
-          Tu presencia es nuestro mayor regalo, pero si deseas mostrarnos tu cariño obsequiándonos algo ponemos a tu disposición un sobre al ingreso de la recepción
-        </h4>
-        </h2>
+    <section class="sec7">
+      <div class="foto"></div>
+      <div class="anuncio">
+        <div class="info_3">
+          <div class="regalo"></div>
+          <h3>
+            Mesa de Regalos
+            ___________
+            <br>
+            Lluvia de Sobres
+          </h3>
+          <h2>
+            Tu presencia es nuestro mayor regalo, pero si deseas mostrarnos tu cariño obsequiándonos algo ponemos a tu disposición un sobre al ingreso de la recepción
+          </h4>
+          </h2>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <div class="formu">
-      <h2>CONFIRMA TU ASISTENCIA</h2>
-      <form class="form" action="/sub" method="post">
-        <h3>Invitado</h3>
-        <div class="form-floating">
-            <input type="text" class="form-control" placeholder="Nombres" name="nombres" id="nombres">
-            <input type="text" class="form-control" placeholder="Apellidos" name="apellidos" id="apellidos">
-        </div>
-
-        <h3>Acompañantes</h3>
-        <div class="form-floating">
-            <select id="inv" onchange="createInputs()" name="cantidad_acompanantes">
-                <option>Seleccione una opción</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-            <div class="invitado" id="inputContainer"></div>
-        </div>
-        <button type="submit" class="btn2">Confirmar</button>
-    </form>
-    </div>
-  </section>
-
-  <section class="sec8">
-    <div class="frase8">
-      <h3>
-        Comparte con nosotros todas tus fotografías del evento, etiquetando a los novios en tus publicaciones e historias de Facebook e Instagram.
-      </h3>
-      <h4>
-        #FliaFloresGodoy
-      </h4>
-
-      <div class="sociales">
-        <button class="btn3" onclick="location.href='https:www.instagram.com/edyflores1?igsh=MTkybGV5bnN2eW1sYg%3D%3D'">Instagram Novio</button>
-        <button class="btn3" onclick="location.href='https:www.instagram.com/pame_godoy90?igsh=bmN6cTR5eHYzdWlr'">Instagram Novia</button>
-      </div>  
-    </div>
-
-  </section>
+    <section>
+      <div class="formu">
+        <h2>CONFIRMA TU ASISTENCIA</h2>
+        <form class="form" action="/sub" method="POST" onsubmit="handleSubmit(event)">
+          <h3>Invitado</h3>
+          <div class="form-floating">
+              <input type="text" class="form-control" placeholder="Nombres" name="nombres" id="nombres">
+              <input type="text" class="form-control" placeholder="Apellidos" name="apellidos" id="apellidos">
+          </div>
       
-    <footer>
+          <h3>Acompañantes</h3>
+          <div class="form-floating">
+              <select id="inv" onchange="createInputs()" name="cantidad_acompanantes">
+                  <option>Seleccione una opción</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+              </select>
+              <div class="invitado" id="inputContainer"></div>
+          </div>
+          <button type="submit" class="btn2">Confirmar</button>
+        </form>
+      </div>
+    </section>
 
+    <section class="sec8">
+      <div class="frase8">
+        <h3>
+          Comparte con nosotros todas tus fotografías del evento, etiquetando a los novios en tus publicaciones e historias de Facebook e Instagram.
+        </h3>
+        <h4>
+          #FliaFloresGodoy
+        </h4>
+
+        <div class="sociales">
+          <button class="btn3" onclick="location.href='https://www.instagram.com/edyflores1?igsh=MTkybGV5bnN2eW1sYg%3D%3D'">Instagram Novio</button>
+          <button class="btn3" onclick="location.href='https://www.instagram.com/pame_godoy90?igsh=bmN6cTR5eHYzdWlr'">Instagram Novia</button>
+        </div>  
+      </div>
+    </section>
+    
+    <footer>
         <h2>Designed by:</h2>
-        <button class="btn4" onclick="location.href='https:www.instagram.com/criss95/'">@criss95</button>
+        <button class="btn4" onclick="location.href='https://www.instagram.com/criss95/'">@criss95</button>
     </footer>
 
-    <script src="mysql.js"></script>
-    <script src="js/simplyCountdown.min.js"></script>
-    <script src="js/script.js"></script>
-
+    <script src="/mysql.js"></script>
+    <script src="/public/simplyCountdown.min.js"></script>
+    <script src="/public/script.js"></script>
   </body>
 </html>

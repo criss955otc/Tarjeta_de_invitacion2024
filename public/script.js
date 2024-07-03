@@ -51,26 +51,42 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.carousel').style.transform = 'translateX(0%)';
 });
 
+
+/*Aqui vamos a crear los imputs*/
+
 function createInputs() {
-    const select = document.getElementById('inv');
-    const inputContainer = document.getElementById('inputContainer');
-    const numberOfInputs = parseInt(select.value, 10);
+    const numInvitados = document.getElementById('inv').value;
+    const container = document.getElementById('inputContainer');
+    container.innerHTML = ''; // Limpiar container antes de agregar nuevos campos
 
-    // Clear the container
-    inputContainer.innerHTML = '';
+    for (let i = 0; i < numInvitados; i++) {
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.placeholder = `Nombre del acompañante ${i + 1}`;
+      input.name = `acompanante_${i + 1}`;
+      input.classList.add('form-control');
+      container.appendChild(input);
+    }
+  }
 
-    // Create the inputs
-    for (let i = 0; i < numberOfInputs; i++) {
-        const input = document.createElement('input');
-        const label = document.createElement('label');
-        label.type = 'text';
-        label.innerText = `Nombres y apellidos`;
-        input.type = 'text';
-        input.placeholder = `Invitado ${i + 1}`;
-        inputContainer.appendChild(label);
-        inputContainer.appendChild(input);  
-              
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const nombres = document.getElementById('nombres').value;
+    const apellidos = document.getElementById('apellidos').value;
+    const numInvitados = document.getElementById('inv').value;
+    const acompañantes = [];
+
+    for (let i = 0; i < numInvitados; i++) {
+      const acompañante = document.getElementsByName(`acompanante_${i + 1}`)[0].value;
+      acompañantes.push(acompañante);
     }
 
+    // Imprimir los datos en la consola
+    console.log('Datos del formulario:');
+    console.log('Nombres:', nombres);
+    console.log('Apellidos:', apellidos);
+    console.log('Acompañantes:', acompañantes);
+  }
 
-}
+  

@@ -1,69 +1,69 @@
+const mysql = require('mysql2');
 const express = require('express');
 const bodyParser = require('body-parser');
-const mysql = require('mysql2');
-const path = require('path')
 
 const app = express();
 const port = 3000;
 
-// Middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json()); // Asegúrate de manejar JSON también
-
-
-// MySQL connection
+// Configuración de la conexión a MySQL
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'rootroot',
-    database: 'bdd_boda'
+  host: "localhost",
+  user: "root",
+  password: "rootroot",
+  database: "db_boda",
 });
 
-connection.connect(err => {
-    if (err) {
-        console.error('Error connecting to the database:', err.stack);
-        return;
-    }
-    console.log('Connected to the database as ID', connection.threadId);
+// Conectar a MySQL
+connection.connect((err) => {
+  if (err) {
+    console.error('Error al conectar a MySQL:', err);
+    return;
+  }
+  console.log('Conexión establecida con MySQL');
 });
 
+// Middleware para procesar JSON y formularios
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/ingreso", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
 
-// Ruta para manejar el envío del formulario
+// Ruta para manejar el POST del formulario
 app.post('/sub', (req, res) => {
-    const { nombres, apellidos, cantidad_acompanantes, ...acompanantes } = req.body;
+  const { nombres, apellidos, cantidad_acompanantes } = req.body;
+  const acompañantes = [];
 
-    // Insertar en la tabla tbl_invitado
-    connection.query('INSERT INTO tbl_invitado (nombres, apellidos) VALUES (?, ?)', [nombres, apellidos], (err, result) => {
-        if (err) {
-            console.error('Error insertando en tbl_invitado:', err);
-            res.status(500).send('Error insertando en tbl_invitado');
-            return;
+  // Insertar invitado
+  const sqlInvitado = 'INSERT INTO tbl_invitado (nombres, apellidos) VALUES (?, ?)';
+  connection.query(sqlInvitado, [nombres, apellidos], (err, resultInvitado) => {
+    if (err) {
+      console.error('Error al insertar invitado en la base de datos:', err);
+      res.status(500).send('Error interno del servidor');
+      return;
+    }
+
+    // Obtener el ID del invitado insertado
+    const invitadoId = resultInvitado.insertId;
+
+    // Insertar acompañantes
+    for (let i = 1; i <= cantidad_acompanantes; i++) {
+      const acompañanteNombre = req.body[`acompanante_${i}`];
+      const sqlAcompanante = 'INSERT INTO tbl_acompanante (invitado_id, nombre) VALUES (?, ?)';
+      connection.query(sqlAcompanante, [invitadoId, acompañanteNombre], (errAcompanante, resultAcompanante) => {
+        if (errAcompanante) {
+          console.error('Error al insertar acompañante en la base de datos:', errAcompanante);
+          res.status(500).send('Error interno del servidor');
+          return;
         }
+        console.log(`Acompañante ${acompañanteNombre} insertado correctamente para el invitado ${invitadoId}`);
+      });
+    }
 
-        const invitadoId = result.insertId;
-
-        // Insertar en la tabla tbl_acompa
-        const values = [];
-        for (let i = 1; i <= cantidad_acompanantes; i++) {
-            values.push([invitadoId, acompanantes[`acompanante${i}`]]);
-        }
-
-        connection.query('INSERT INTO tbl_acompa (id_invitado, nombre_acompanante) VALUES ?', [values], (err, result) => {
-            if (err) {
-                console.error('Error insertando en tbl_acompa:', err);
-                res.status(500).send('Error insertando en tbl_acompa');
-                return;
-            }
-            res.send('Datos insertados correctamente');
-        });
-    });
+    console.log('Datos insertados correctamente');
+    res.status(200).send('Datos insertados correctamente');
+  });
 });
 
+// Iniciar el servidor
 app.listen(port, () => {
-    console.log(`Servidor corriendo en http://localhost:${port}/`);
+  console.log(`Servidor corriendo en http://localhost:${port}`);
 });
-

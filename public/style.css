@@ -292,7 +292,7 @@ select:hover{
   width: 275px;
   height: 375px;
   border: 5px;
-  background-image: url(img/traje.png);
+  background-image: url(img/vestido.png);
   background-size: cover;
   background-position: center;
 }
@@ -309,7 +309,7 @@ select:hover{
   width: 275px;
   height: 375px;
   border: 5px;
-  background-image: url(img/vestido.png);
+  background-image: url(img/traje\ hombre.png);
   background-size: cover;
   background-position: center;
 }
@@ -905,7 +905,7 @@ input {
     width: 195px;
     height: 195px;
     border: 5px;
-    background-image: url(img/traje.png);
+    background-image: url(img/traje\ hombre.png);
     background-size: cover;
     background-position: center;
   }
@@ -965,7 +965,7 @@ input {
   }
 
   #imagen1 {
-    background-image: url(public/img/IMG_2060.webp);
+    background-image: url(img/IMG_2060.webp);
     background-position: center;
     background-size: cover;
   }
