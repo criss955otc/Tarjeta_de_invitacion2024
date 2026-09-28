@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boda Pame y Edy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Rouge+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <h1>Pame &amp; Edy</h1>
+      <p class="fecha">Sábado 20 de julio de 2024 · Ibarra, Ecuador</p>
+      <div id="cuenta" data-fecha="<%= evento.fecha %>" aria-live="off"></div>
+      <button class="btn" id="musica" type="button">Escuchar nuestra canción</button>
+      <audio id="audio" src="/audio/cancion.mp4" preload="none" loop></audio>
+    </div>
+  </header>
+
+  <section class="verde">
+    <div class="wrap">
+      <blockquote>“El amor es lo que nos une, la felicidad es lo que nos mantiene juntos. ¡Únanse a nosotros en nuestra boda y celebremos el amor!”</blockquote>
+      <p class="gol">Como un gol en el minuto 90.</p>
+    </div>
+  </section>
+
+  <section class="s floral">
+    <div class="wrap">
+      <h2>Nuestros padres y padrinos</h2>
+      <div class="pares">
+        <div><h3>Novia</h3><p>Martha Lucía Trujillo Bravo</p><p>Nomberto Fabián Godoy Rosas</p></div>
+        <div><h3>Novio</h3><p>Guadalupe de Lourdes Bosmediano Cabrera</p><p>Marco Antonio Flores Miño</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s galeria-sec">
+    <div class="wrap">
+      <div class="galeria" id="galeria" tabindex="0" aria-label="Galería de fotos">
+        <img src="/img/IMG_2060.webp" alt="Pame y Edy abrazados sobre la vía del tren" loading="lazy">
+        <img src="/img/IMG_2067.webp" alt="Pame y Edy caminando de la mano" loading="lazy">
+        <img src="/img/IMG_2065.webp" alt="Pame y Edy besándose sobre los rieles" loading="lazy">
+        <img src="/img/img2.webp" alt="Pame y Edy abrazados frente a las montañas" loading="lazy">
+        <img src="/img/IMG_2068.webp" alt="Pame y Edy sentados sobre la vía" loading="lazy">
+        <img src="/img/IMG_2069.webp" alt="Pame y Edy con una guirnalda de compromiso" loading="lazy">
+        <img src="/img/img7.webp" alt="La mano de Pame con su anillo de compromiso" loading="lazy">
+      </div>
+      <div class="flechas">
+        <button class="btn" type="button" data-dir="-1" aria-label="Foto anterior">&#10094;</button>
+        <button class="btn" type="button" data-dir="1" aria-label="Foto siguiente">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="s">
+    <div class="wrap">
+      <h2>Dónde y cuándo</h2>
+      <div class="lugar">
+        <img src="/img/igle.png" alt="" width="140" height="140">
+        <h3>Ceremonia · 11:30</h3>
+        <p>Parroquia San Francisco<br>Basílica La Dolorosa<br>Av. Sucre y Liborio Madera</p>
+        <a class="btn" href="https://acortar.link/ZOGsoz" target="_blank" rel="noopener">Ver dirección</a>
+      </div>
+      <div class="via" aria-hidden="true"></div>
+      <div class="lugar">
+        <img src="/img/recep.png" alt="" width="140" height="140">
+        <h3>Recepción</h3>
+        <p>Parroquia San Antonio de Ibarra<br>Finca Bellavista</p>
+        <a class="btn" href="https://acortar.link/8j2LNi" target="_blank" rel="noopener">Ver dirección</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="s verde">
+    <div class="wrap">
+      <h2>Código de vestimenta</h2>
+      <div class="vestir">
+        <img src="/img/vestido.png" alt="Ilustración de vestido largo">
+        <div>
+          <h3>Formal</h3>
+          <p>Mujeres: vestido largo</p>
+          <p>Hombres: traje</p>
+          <p class="aviso">Nos reservamos el blanco, el beige y sus derivados para la novia.</p>
+        </div>
+        <img src="/img/traje-hombre.png" alt="Ilustración de traje">
+      </div>
+    </div>
+  </section>
+
+  <section class="s">
+    <div class="wrap">
+      <div class="nota">
+        <h2>Solo adultos</h2>
+        <p>Amamos a sus pequeños, sin embargo, queremos que en este día solo tengan que preocuparse por pasarla increíble y disfrutar el inicio de nuestra historia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="split">
+    <img src="/img/IMG_2063.webp" alt="Pame y Edy formando un corazón con las manos" loading="lazy">
+    <div class="terra">
+      <img src="/img/Regalo.png" alt="" width="140">
+      <h2>Mesa de regalos<br>Lluvia de sobres</h2>
+      <p>Tu presencia es nuestro mayor regalo, pero si deseas mostrarnos tu cariño obsequiándonos algo, habrá un sobre a tu disposición al ingreso de la recepción.</p>
+    </div>
+  </section>
+
+  <section class="s floral" id="confirmar">
+    <div class="wrap">
+      <form class="panel" id="rsvp" action="/sub" method="POST">
+        <h2>Confirma tu asistencia</h2>
+        <label>Nombres <input name="nombres" required maxlength="100" autocomplete="given-name"></label>
+        <label>Apellidos <input name="apellidos" required maxlength="100" autocomplete="family-name"></label>
+        <label>¿Cuántos acompañantes traerás?
+          <select id="num" name="cantidad_acompanantes">
+            <option value="0">Ninguno, asisto solo/a</option>
+            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+          </select>
+        </label>
+        <div id="acomp"></div>
+        <button class="btn" type="submit">Confirmar asistencia</button>
+        <p id="msg" class="msg <%= confirmado ? 'ok' : '' %>" role="status"><%= confirmado ? '¡Gracias! Tu asistencia quedó confirmada.' : '' %></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="s terra">
+    <div class="wrap">
+      <p>Comparte con nosotros todas tus fotografías del evento, etiquetando a los novios en tus publicaciones e historias de Facebook e Instagram.</p>
+      <h2>#FliaFloresGodoy</h2>
+      <a class="btn claro" href="https://www.instagram.com/edyflores1?igsh=MTkybGV5bnN2eW1sYg%3D%3D" target="_blank" rel="noopener">Instagram del novio</a>
+      <a class="btn claro" href="https://www.instagram.com/pame_godoy90?igsh=bmN6cTR5eHYzdWlr" target="_blank" rel="noopener">Instagram de la novia</a>
+    </div>
+  </section>
+
+  <footer>Diseñado por <a href="https://www.instagram.com/criss95/" target="_blank" rel="noopener">@criss95</a></footer>
+  <script src="/js/script.js"></script>
+</body>
+</html>
